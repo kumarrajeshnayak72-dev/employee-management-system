@@ -55,7 +55,7 @@ Vivaan| "vivaan@example.com"| "vivaan123"
 
 Clone the repository
 
-git clone <>
+git clone <https://github.com/kumarrajeshnayak72-dev/employee-management-system>
 
 Install dependencies
 
