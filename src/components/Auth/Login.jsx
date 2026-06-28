@@ -10,12 +10,13 @@ const Login = ({ handleLogin }) => {
     setEmail("");
     setPassword("");
   };
+
   return (
     <Fragment>
-      <div className="bg-black text-white h-screen flex justify-center items-center">
+      <div className="bg-black text-white min-h-screen flex justify-center items-center px-4">
         <form
           onSubmit={(e) => submitHandler(e)}
-          className="flex flex-col border h-62.5 w-87.5 p-3 rounded-xl justify-center items-center border-emerald-600 gap-2"
+          className="flex flex-col border w-full max-w-sm p-3 rounded-xl justify-center items-center border-emerald-600 gap-2"
         >
           <input
             type="email"

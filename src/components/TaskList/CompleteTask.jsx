@@ -1,31 +1,31 @@
 import React from "react";
 
 const CompleteTask = (props) => {
-  const employees = JSON.parse(localStorage.getItem("employees"));
+  const complete = () => {
+    if (props.data.taskCounts.active > 0) {
+      props.data.taskCounts.active -= 1;
+      props.data.taskCounts.completed += 1;
+    }
+  };
 
-  const employee = employees.find((emp) => emp.id === props.data.id);
-
-  if (employee.taskCounts.active > 0) {
-    employee.taskCounts.active -= 1;
-    employee.taskCounts.completed += 1;
-
-    localStorage.setItem("employees", JSON.stringify(employees));
-  }
-
-  console.log(employee);
   return (
-    <div className="bg-green-400 h-full w-75 rounded-xl shrink-0 p-5">
+    <div className="bg-green-400 h-full w-64 sm:w-75 rounded-xl shrink-0 p-4 sm:p-5">
       <div className="flex justify-between items-center">
-        <h1 className=" bg-red-600 text-sm px-3 py-1 rounded-sm">
+        <h1 className="bg-red-600 text-xs sm:text-sm px-2 sm:px-3 py-1 rounded-sm">
           {props.val.category}
         </h1>
-        <h3 className="text-sm">{props.val.taskDate}</h3>
+        <h3 className="text-xs sm:text-sm">{props.val.taskDate}</h3>
       </div>
-      <h1 className="mt-5 text-lg  font-bold">{props.val.taskTitle}</h1>
-      <p className="mt-2 text-sm">{props.val.taskDescription}</p>
+
+      <h1 className="mt-4 sm:mt-5 text-base sm:text-lg font-bold">
+        {props.val.taskTitle}
+      </h1>
+
+      <p className="mt-2 text-xs sm:text-sm">{props.val.taskDescription}</p>
+
       <button
         onClick={complete}
-        className="bg-red-600 text-sm px-3 py-1 rounded-sm mt-5 flex items-center justify-center active:scale-95 transition-all duration-300"
+        className="bg-red-600 text-xs sm:text-sm px-3 py-1 rounded-sm mt-4 sm:mt-5 flex items-center justify-center active:scale-95 transition-all duration-300"
       >
         Complete
       </button>

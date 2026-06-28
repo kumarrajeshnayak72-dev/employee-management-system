@@ -7,14 +7,22 @@ const AllTask = () => {
   return (
     <div
       id="allTask"
-      className="bg-[#1c1c1c] mt-5 p-5 rounded-lg overflow-auto"
+      className="bg-[#1c1c1c] mt-5 p-3 sm:p-5 rounded-lg overflow-auto"
     >
-      <div className="flex justify-between items-center bg-red-400 p-3 rounded-lg mb-2">
-        <h2 className="w-1/5 text-lg font-medium">NAME</h2>
-        <h2 className="w-1/5 text-lg font-medium text-center">ACTIVE</h2>
-        <h2 className="w-1/5 text-lg font-medium text-center">NEW TASK</h2>
-        <h2 className="w-1/5 text-lg font-medium text-center">COMPLETED</h2>
-        <h2 className="w-1/5 text-lg font-medium text-center">FAILED</h2>
+      <div className="flex justify-between items-center bg-red-400 p-2 sm:p-3 rounded-lg mb-2 min-w-[600px] sm:min-w-0">
+        <h2 className="w-1/5 text-sm sm:text-lg font-medium">NAME</h2>
+        <h2 className="w-1/5 text-sm sm:text-lg font-medium text-center">
+          ACTIVE
+        </h2>
+        <h2 className="w-1/5 text-sm sm:text-lg font-medium text-center">
+          NEW TASK
+        </h2>
+        <h2 className="w-1/5 text-sm sm:text-lg font-medium text-center">
+          COMPLETED
+        </h2>
+        <h2 className="w-1/5 text-sm sm:text-lg font-medium text-center">
+          FAILED
+        </h2>
       </div>
 
       <div id="employeeList" className="">
@@ -22,19 +30,21 @@ const AllTask = () => {
           return (
             <div
               key={emp.id}
-              className="flex justify-between items-center border border-red-400 p-3 rounded-lg mb-2"
+              className="flex justify-between items-center border border-red-400 p-2 sm:p-3 rounded-lg mb-2 min-w-[600px] sm:min-w-0"
             >
-              <h2 className="w-1/5 text-lg font-medium">{emp.firstName}</h2>
-              <h2 className="w-1/5 text-lg font-medium text-center">
+              <h2 className="w-1/5 text-sm sm:text-lg font-medium">
+                {emp.firstName}
+              </h2>
+              <h2 className="w-1/5 text-sm sm:text-lg font-medium text-center">
                 {emp.taskCounts.active}
               </h2>
-              <h2 className="w-1/5 text-lg font-medium text-center">
+              <h2 className="w-1/5 text-sm sm:text-lg font-medium text-center">
                 {emp.taskCounts.newTask}
               </h2>
-              <h2 className="w-1/5 text-lg font-medium text-center">
+              <h2 className="w-1/5 text-sm sm:text-lg font-medium text-center">
                 {emp.taskCounts.completed}
               </h2>
-              <h2 className="w-1/5 text-lg font-medium text-center">
+              <h2 className="w-1/5 text-sm sm:text-lg font-medium text-center">
                 {emp.taskCounts.failed}
               </h2>
             </div>

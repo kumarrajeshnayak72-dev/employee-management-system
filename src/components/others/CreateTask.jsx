@@ -38,9 +38,9 @@ const CreateTask = () => {
   return (
     <form
       onSubmit={(e) => submitHandler(e)}
-      className="flex justify-between items-center bg-[#1C1C1C] mt-10 p-5 w-full rounded-lg "
+      className="flex flex-col lg:flex-row justify-between items-center bg-[#1C1C1C] mt-10 p-5 w-full rounded-lg gap-6"
     >
-      <div className="w-[40%] p-2">
+      <div className="w-full lg:w-[40%] p-2">
         <h3 className="text-md">Task Title</h3>
         <input
           onChange={(e) => settaskTitle(e.target.value)}
@@ -73,13 +73,15 @@ const CreateTask = () => {
           className="outline-none border px-3 py-1 rounded-lg w-full mt-1 mb-3"
         />
       </div>
-      <div className="w-[40%] flex justify-start flex-col ">
+
+      <div className="w-full lg:w-[40%] flex justify-start flex-col">
         <h3 className="text-md">Description</h3>
         <textarea
           onChange={(e) => setDescription(e.target.value)}
           value={description}
-          className="border h-47.5 mt-1 mb-3 px-3 py-1 rounded-lg"
+          className="border h-40 lg:h-47.5 mt-1 mb-3 px-3 py-1 rounded-lg w-full"
         ></textarea>
+
         <button className="w-full bg-emerald-400 py-1 rounded-lg flex justify-center items-center active:scale-95 transition-all duration-300">
           Create Task
         </button>

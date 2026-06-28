@@ -1,7 +1,7 @@
 import React from "react";
 
 const AcceptTask = (props) => {
-  console.log("Complete", props.data);
+  // console.log("Complete", props.data);
 
   const Complete = () => {
     const employees = JSON.parse(localStorage.getItem("employees"));
@@ -17,6 +17,7 @@ const AcceptTask = (props) => {
 
     console.log(employee);
   };
+
   const Failed = () => {
     const employees = JSON.parse(localStorage.getItem("employees"));
 
@@ -33,25 +34,31 @@ const AcceptTask = (props) => {
   };
 
   return (
-    <div className="bg-red-400 h-full w-75 rounded-xl shrink-0 p-5">
+    <div className="bg-red-400 h-full w-64 sm:w-75 rounded-xl shrink-0 p-4 sm:p-5">
       <div className="flex justify-between items-center">
-        <h1 className=" bg-red-600 text-sm px-3 py-1 rounded-sm">
+        <h1 className="bg-red-600 text-xs sm:text-sm px-2 sm:px-3 py-1 rounded-sm">
           {props.val.category}
         </h1>
-        <h3 className="text-sm">{props.val.taskDate}</h3>
+        <h3 className="text-xs sm:text-sm">{props.val.taskDate}</h3>
       </div>
-      <h1 className="mt-5 text-lg  font-bold">{props.val.taskTitle}</h1>
-      <p className="mt-2 text-sm">{props.val.taskDescription}</p>
-      <div className="flex justify-start items-center gap-2">
+
+      <h1 className="mt-4 sm:mt-5 text-base sm:text-lg font-bold">
+        {props.val.taskTitle}
+      </h1>
+
+      <p className="mt-2 text-xs sm:text-sm">{props.val.taskDescription}</p>
+
+      <div className="flex flex-col sm:flex-row sm:items-center gap-2 mt-4 sm:mt-0">
         <button
           onClick={Complete}
-          className="bg-green-600 text-white px-3 py-1 rounded-sm mt-5 text-sm active:scale-95 transition-all duration-300"
+          className="bg-green-600 text-white px-3 py-1 rounded-sm text-xs sm:text-sm active:scale-95 transition-all duration-300"
         >
           Mark as Completed
         </button>
+
         <button
           onClick={Failed}
-          className="bg-red-600 text-white px-3 py-1 rounded-sm mt-5 text-sm ml-2 active:scale-95 transition-all duration-300"
+          className="bg-red-600 text-white px-3 py-1 rounded-sm text-xs sm:text-sm active:scale-95 transition-all duration-300"
         >
           Mark as Failed
         </button>

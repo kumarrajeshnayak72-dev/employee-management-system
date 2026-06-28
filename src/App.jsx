@@ -7,11 +7,13 @@ import { useContext } from "react";
 import { AuthContext } from "./context/AuthProvider";
 
 const App = () => {
+  // localStorage.clear();
   const [user, setUser] = useState(null);
   const [loggedInUserData, setLoggedInUserData] = useState(null);
   const authData = useContext(AuthContext);
 
   useEffect(() => {
+    // setLocalStorage();
     const loggedInUser = localStorage.getItem("loggedInUser");
     if (loggedInUser) {
       const userData = JSON.parse(loggedInUser);
@@ -19,6 +21,8 @@ const App = () => {
       setLoggedInUserData(userData.data);
     }
   }, []);
+
+  // console.log(loggedInUserData);
 
   const handleLogin = (email, password) => {
     if (email == "admin@example.com" && password == "admin123") {
