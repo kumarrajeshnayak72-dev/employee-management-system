@@ -1,4 +1,5 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
+import { setLocalStorage } from "../../utilities/LocalStorage";
 
 const Login = ({ handleLogin }) => {
   const [email, setEmail] = useState("");
