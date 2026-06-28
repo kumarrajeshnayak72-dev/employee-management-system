@@ -1,16 +1,91 @@
-# React + Vite
+Employee Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern Employee Management System built with React.js. This project demonstrates role-based authentication, task management, and local storage data persistence without any backend.
 
-Currently, two official plugins are available:
+🌐 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Live Website: https://employee-management-system-ten-ashy.vercel.app
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+✨ Features
 
-## Expanding the ESLint configuration
+- 🔐 Admin & Employee Login
+- 👨‍💼 Separate Admin and Employee Dashboards
+- ➕ Admin can create and assign tasks
+- 📋 Employees can view their assigned tasks
+- ✅ Employees can mark tasks as Completed or Failed
+- 📊 Task status tracking (New, Active, Completed, Failed)
+- 💾 Data stored using Local Storage
+- 🎨 Responsive and Clean UI
+- 🚪 Login & Logout functionality
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+🛠️ Tech Stack
+
+- React.js
+- JavaScript (ES6+)
+- HTML5
+- CSS3
+- Tailwind CSS
+- Local Storage
+
+---
+
+🔑 Demo Login Credentials
+
+👨‍💼 Admin
+
+Email: "admin@example.com"
+Password: "admin123"
+
+👥 Employee Accounts
+
+Employee| Email| Password
+Aarav| "john@example.com"| "john123"
+Ananya| "emma@example.com"| "emma123"
+Liam| "liam@example.com"| "liam123"
+Noah| "noah@example.com"| "noah123"
+Vivaan| "vivaan@example.com"| "vivaan123"
+
+---
+
+🚀 Getting Started
+
+Clone the repository
+
+git clone <>
+
+Install dependencies
+
+npm install
+
+Run the development server
+
+npm run dev
+
+---
+
+📌 Project Highlights
+
+- Role-based Authentication
+- Admin & Employee Dashboards
+- Task Assignment and Management
+- Local Storage as Database
+- Responsive UI with Tailwind CSS
+- Clean React Component Structure
+
+---
+
+📖 Note
+
+This project uses Local Storage as its database. All login credentials, employee information, and task data are stored locally in the browser. No backend or external database is required.
+
+---
+
+👨‍💻 Author
+
+Rajesh Kumar Nayak
+
+If you found this project useful, consider giving it a ⭐ on GitHub!
